@@ -2,11 +2,17 @@
 <!-- Pourquoi vous regardez mon code source ? -->
 <html lang="fr">
 	<head>
-		<title>#PSES2019</title>
-		<link rel="shortcut icon" href="assets/images/pastille.ico" type="favicon/ico" />
+		<title>#HitchHack 2020</title>
+		<link rel="shortcut icon" href="assets/images/logo_hh.ico" type="favicon/ico" />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+		<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+		integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+		crossorigin=""></script>
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css"></noscript>
 	</head>
@@ -16,18 +22,17 @@
 				<!-- Header -->
 					<header id="header">
 						<div class="logo">
-							<span class="icon"><img src="assets/images/pastille.png" alt="Logo de l'association, un lapin en pixel aux couleurs de l'arc-en-ciel sur un fond blanc." height="100%" width="100%"></span>
+							<span class="icon"><img src="assets/images/logo_hh.png" alt="Logo de l'association, un lapin en pixel aux couleurs de l'arc-en-ciel sur un fond blanc." height="100%" width="100%"></span>
 						</div>
 						<div class="content">
 							<div class="inner">
 								<h1 hidden>Festival Pas Sage En Seine</h1>
-								<img src="assets/images/banner.png" height="85%" width="85%" alt="Pas Sage En Seine MMXIX. 27, 28, 29, 30 Juin. Société - Internt - Liberté">
-									<p>Faites preuve de curiosité</p>
-									<!-- <p>Fin de la campagne de dons dans : </p> -->
-									<!-- <p id="countdown" style="font-size:20px"></p>-->
+								<img src="assets/images/banner_temp.png" height="85%" width="85%" alt="Pas Sage En Seine MMXIX. 27, 28, 29, 30 Juin. Société - Internt - Liberté">
+									<p>Des conférences techniques, sur le numérique, grand public et <b> ouvertes à tous </b> !</p>
+									<p id="countdown" style="font-size:20px"></p>
 									<!--<p>🔴En Live ! <a href="https://live.passageenseine.fr/">https://live.passageenseine.fr/</a><br />-->
 									<!-- <a href="https://live.passageenseine.fr"><button type="button">EN LIVE !</button></a> -->
-									<p>Médiathèque de Choisy-le-Roi</p>
+									<p>Bâtiment DSEG du Campus Tohannic, Vannes</p>
 							</div>
 						</div>
 						<div>
@@ -38,7 +43,7 @@
 								<li><a href="#Programme" title="Lien vers le programme du festival">Programme</a></li>
 								<!-- <li><a href="#VillageAsso">Village Associatif</a></li> -->
 								<li><a href="#Info" title="Lien vers les informations pratiques sur le festival">Infos</a></li>
-								<li><a href="#Manger" title="Lien vers les informations pour manger pendant festival">Manger</a></li>
+								<!-- <li><a href="#Manger" title="Lien vers les informations pour manger pendant festival">Manger</a></li> -->
 								<li><a href="#CodeConduite" title="Lien vers le Code de conduite du festival">Code de conduite</a></li>
 								<!--li><a href="#Outils">Outils</a></li-->
 								<li><a href="#Assopage" title="Lien vers les informations sur l'association qui gère le festival">Association</a></li>
@@ -95,8 +100,8 @@
 								</li>
 								<li>
 								  Nous écrire
-								  <!--<a href="mailto:contact@passageenseine.fr" class="icon fa-envelope" title="Cliquez ici pour nous envoyer un courriel depuis votre client de courriel"><span></span></a>-->
-								  <a href="mailto:contact@passageenseine.fr" title="Cliquez ici pour nous envoyer un courriel depuis votre client de courriel">
+								  <!--<a href="mailto:contact@hack2g2.fr" class="icon fa-envelope" title="Cliquez ici pour nous envoyer un courriel depuis votre client de courriel"><span></span></a>-->
+								  <a href="mailto:contact@hack2g2.fr" title="Cliquez ici pour nous envoyer un courriel depuis votre client de courriel">
 								    <img src="assets/images/close-envelope.svg" height="22" alt="Icône d'une enveloppe blanche fermée sur fond noir">
 								  </a>
 								</li>
@@ -107,7 +112,7 @@
 							<h2>Village Associatif</h2>
 							<p>L'appel pour le village associatif est maintenant ouvert,
 								votre association peut se proposer en envoyant un mail à l'adresse
-								<a href="mailto:contact@passageenseine.fr">contact@passageenseine.fr</a>
+								<a href="mailto:contact@hack2g2.fr">contact@hack2g2.fr</a>
 							</p>
 						</article> -->
 						<!-- Village associatif -->
@@ -194,15 +199,16 @@
 							<p>Le festival a lieu aux abords de la Médiathèque Aragon à Choisy-le-Roi, à 5 min à pied de la Gare de RER «&nbsp;Choisy-le-Roi&nbsp;» sur la ligne C.</p>
 							<p>La médiathèque Aragon (17 Rue Pierre Mendès France, 94&nbsp;600 Choisy-le-Roi) met à notre disposition la salle l'Escale pour les conférences, son espace convivial près de l'accueil pour certains ateliers et son rez-de-chaussée pour le village associatif.</p>
 							<p>Le lieu est accessible aux personnes moins valides.</p>
-							<p><img alt="plan" src="assets/images/plan.jpg" height="185" alt="Image du plan pour faciliter la façon de se rendre à la médiathèque depuis le RER C, la ligne de bus 183 et la ligne de bus 185."></p>
+							<div id="mapid" style="height: 180px;"></div>
+							<br>
 
 							<h3>Hébergement</h3>
-							<p>Un appart-hôtel est également présent à moins d'une minute de la médiathèque et vous propose des chambres à partir de 62€ par nuit&nbsp;:
-							  <a target="_blank" href="http://www.allsuites-apparthotel.com/residences-hotelieres/all-suites-appart-hotel-choisy-le-roi"
-							     title="Lien vers le site de l'Appart-hôtel près de la médiathèque, ouvre une nouvelle page">
-							    http://www.allsuites-apparthotel.com/residences-hotelieres/all-suites-appart-hotel-choisy-le-roi
+							<p>Un appart-hôtel est également présent à moins d'une minute du campus et vous propose des chambres à partir de 52€ par nuit&nbsp;:
+							  <a target="_blank" href="https://www.appartcity.com/en/destinations/bretagne/vannes/vannes.html"
+							     title="Lien vers le site de l'Appart-hôtel près du campus, ouvre une nouvelle page">
+							    https://www.appartcity.com/en/destinations/bretagne/vannes/vannes.html
 							  </a>
-							<p><a href="mailto:contact@passageenseine.fr" title="Cliquez ici pour nous envoyer un courriel depuis votre client de courriel">Contactez-nous en cas de problème</a></p>
+							<p><a href="mailto:contact@hack2g2.fr" title="Cliquez ici pour nous envoyer un courriel depuis votre client de courriel">Contactez-nous en cas de problème</a></p>
 						</article>
 
 						<!-- Manger -->
@@ -425,18 +431,18 @@
 							<h2 class="major">Mentions légales</h2>
 							<h3>Responsable du site</h3>
 							<p>Vous pouvez nous joindre par mail en cliquant sur le lien suivant :</p>
-							<p><a href="mailto:contact@passageenseine.fr" title="Cliquez ici pour nous envoyer un courriel depuis votre client de courriel">contact@passageenseine.fr</a></p>
+							<p><a href="mailto:contact@hack2g2.fr" title="Cliquez ici pour nous envoyer un courriel depuis votre client de courriel">contact@hack2g2.fr</a></p
 
 							<h3>Hébergement</h3>
-							<p>Le site passageenseine.fr est hébergé par White Rabbit-PSES</p>
+							<p>Le site hack2g2.fr est hébergé par OVH</p>
 						</article>
 						<!-- Archive -->
 						<article id="Archive">
 							<h2 class="major">Archives et vidéos</h2>
 							<p>Instance PeerTube</p>
 							<ul>
-							  <li><a href="https://video.passageenseine.fr/"
-								 title="Cliquez ici pour voir les archives des conférences depuis notre instance PeerTube auto-hébergée">https://video.passageenseine.fr/</a></li>
+							  <li><a href="https://videos.hack2g2.fr/"
+								 title="Cliquez ici pour voir les archives des conférences depuis notre instance PeerTube auto-hébergée">https://videos.hack2g2.fr/</a></li>
 							</ul>
 						</article>
 					</div>
@@ -445,11 +451,8 @@
 					<footer id="footer">
 					  <!--<ul class="icons">-->
 					  <div class="icons">
-					    <a target="_blank" href="https://twitter.com/passageenseine" title="Lien vers le compte Twitter du festival, ouvre une nouvelle fenêtre">
+					    <a target="_blank" href="https://twitter.com/hack2g2" title="Lien vers le compte Twitter de l'asso, ouvre une nouvelle fenêtre">
 					      <img src="assets/images/twitter.png" height="30" alt="Icône du logo de Twitter, un oiseau noir sur une pastille blanche">
-					    </a>
-					    <a target="_blank" href="https://ecurie.social/@PasSageEnSeine" title="Lien vers le compte Mastodon du festival, ouvre une nouvelle fenêtre">
-					      <img src="assets/images/mastodon-white.png" height="30" alt="Icône du logo de Mastodon, en noir sur une pastille blanche">
 					    </a>
 					    <a target="_blank" href="https://creativecommons.org/licenses/by-sa/3.0/fr/" title="Liens vers la page de la licence Creative Commons 3.0 by SA en français, ouvre une nouvelle fenêtre">
 					      <img src="assets/images/cc.large.png" height="32" alt="Logo de la licence Creative Commons 3.0 by SA">
@@ -459,25 +462,19 @@
 
 					  <article id="partners">
 					    <p>Nos partenaires</p>
-					    <a target="_blank" href="https://www.codeursenliberté.fr/" title="Lien vers le site de la SCOP Codeurs en Liberté, ouvre une nouvelle fenêtre">
-					      <img src="assets/images/codeurs-en-liberte.svg" height="35" alt="Logo de la SCOP Codeurs en liberté, une épingle à nourrice rouge sur une touche de clavier blanche">
-					    </a>
-					    <a target="_blank" href="https://www.octopuce.fr" title="Lien vers le site de l'hébergeur Octopuce, ouvre une nouvelle fenêtre">
-					      <img src="assets/images/octopuce.png" height="35" alt="Logo de l'hébergeur Octopuce, un poulpe en pixel-art de couleur bleue">
-					    </a>
-						<a target="_blank" href="https://www.codelutin.com/" title="Lien vers le site de l'entreprise Code Lutin, ouvre une nouvelle fenêtre">
-					      <img src="assets/images/code-lutin.png" height="35" alt="Logo de l'entreprise Code Lutin, un lutin stylisé de couleur orange">
-					    </a>
-					    <a target="_blank" href="https://www.la-rache.com" title="Lien vers le site de l'International Institute of La RACHE, ouvre une nouvelle fenêtre">
-					      <img src="assets/images/larache.png" height="35" alt="Logo de l'International Institute of La RACHE, le texte ILLAR en bleu sur fond blanc">
-					    </a>
-					    <a target="_blank" href="https://www.choisyleroi.fr" title="Lien vers le site de la mairie de la ville de Choisy-le-Roi, ouvre une nouvelle fenêtre">
-					      <img src="assets/images/choisy.jpg" height="35" alt="Logo de la ville de Choisy-le-Roi sur fond blanc">
-					    </a>
+						<a target="_blank" href="https://www.lorcyber.eu/" title="Lien vers le site de la société Lorcyber, ouvre une nouvelle fenêtre">
+							<img src="assets/images/lorcyber.png" height="35" alt="Logo de la société Lorcyber, un carré orange rempli de ronds et de rectangles">
+						</a>
+						<a target="_blank" href="https://www.digital.security/" title="Lien vers le site de digital.security, ouvre une nouvelle fenêtre">
+							<img src="assets/images/digital_security.png" height="35" alt="Logo de digital.security, le texte digital.security en blanc">
+						</a>
+						<a target="_blank" href="https://www.univ-ubs.fr" title="Lien vers le site de l'Université de Bretagne Sud, ouvre une nouvelle fenêtre">
+					      <img src="assets/images/ubs.png" height="35" alt="Logo de l'Université de Bretagne Sud en niveaux de gris">
+						</a>
 					  </article>
 
-					  <p class="copyright">PSES 2019</p>
-					  <p class="copyright"><a href="#mentions" title="Lien vers les mentions légales du site de Pas Sage En Seine"><span class="label">Mentions légales</span></a>
+					  <p class="copyright">Hack2G2</p>
+					  <p class="copyright"><a href="#mentions" title="Lien vers les mentions légales du site de la HitchHack"><span class="label">Mentions légales</span></a>
 					  <!--<p class="copyright"><a href="56k.html" title="Lien vers la version bas débit du site de Pas Sage en Seine"><span class="label">Bas débit</span></a>-->
 					</footer>
 
@@ -491,39 +488,54 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script>/*
-//document.getElementById("countdown").innerHTML = "PSES 2018 est en cours de préparation. :)";
-// Set the date we're counting down to
-var countDownDate = new Date("Jun 28, 2018 10:00:00").getTime();
+			<script>
+				// document.getElementById("countdown").innerHTML = "La HitchHack 2020 est en cours de préparation !";
+				// Set the date we're counting down to
+				var countDownDate = new Date("Mar 21, 2020 09:00:00").getTime();
 
-// Update the count down every 1 second
-var countdownfunction = setInterval(function() {
+				// Update the count down every 1 second
+				var countdownfunction = setInterval(function() {
 
-    // Get todays date and time
-    var now = new Date().getTime();
+					// Get todays date and time
+					var now = new Date().getTime();
 
-    // Find the distance between now an the count down date
-    var distance = Math.floor((countDownDate - now)/1000);
+					// Find the distance between now an the count down date
+					var distance = Math.floor((countDownDate - now)/1000);
 
-	var seconds = distance % 60;
-	distance = (distance - seconds) / 60;
-	var minutes = distance % 60;
-	distance = (distance - minutes) / 60;
-	var hours = distance % 24;
-	distance = (distance - hours) / 24;
-	var days = distance;
+					var seconds = distance % 60;
+					distance = (distance - seconds) / 60;
+					var minutes = distance % 60;
+					distance = (distance - minutes) / 60;
+					var hours = distance % 24;
+					distance = (distance - hours) / 24;
+					var days = distance;
 
-    // Output the result in an element with id="demo"
-    document.getElementById("countdown").innerHTML = days + "j " + hours + "h "
-    + minutes + "m " + seconds + "s ";
+					// Output the result in an element with id="demo"
+					document.getElementById("countdown").innerHTML = "La HitchHack 2020 commence dans :<br>" + days + "j " + hours + "h "
+					+ minutes + "m " + seconds + "s ";
 
-    // If the count down is over, write some text
-    if (distance < 0) {
-        clearInterval(countdownfunction);
-        document.getElementById("countdown").outerHTML = "PSES 2018 est en cours. :)";
-    }
-}, 1000);
-</script>
+					// If the count down is over, write some text
+					if (distance < 0) {
+						clearInterval(countdownfunction);
+						document.getElementById("countdown").outerHTML = "La HitchHack 2020 est en cours. :)";
+					}
+				}, 1000);
+			</script>
+			<script>
+				var mymap = L.map('mapid').setView([47.64464, -2.74720], 18);
+
+				// add the OpenStreetMap tiles
+				L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+					maxZoom: 17,
+					attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+				}).addTo(mymap);
+
+				// show the scale bar on the lower left corner
+				L.control.scale().addTo(mymap);
+
+				// show a marker on the map
+				L.marker({lon: 47.64464, lat: -2.74720}).bindPopup('Bâtiment DSEG, lieu de Déroulement de la HitchHack 2020').addTo(mymap);
+			</script>
 
 	</body>
 </html>
