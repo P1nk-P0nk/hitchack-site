@@ -27,7 +27,7 @@
 						<div class="content">
 							<div class="inner">
 								<h1 hidden>Festival Pas Sage En Seine</h1>
-								<img src="assets/images/banner_temp.png" height="85%" width="85%" alt="Pas Sage En Seine MMXIX. 27, 28, 29, 30 Juin. Société - Internt - Liberté">
+								<img src="assets/images/banner_h.png" height="85%" width="85%" alt="Pas Sage En Seine MMXIX. 27, 28, 29, 30 Juin. Société - Internt - Liberté">
 									<p>Des conférences techniques, sur le numérique, grand public et <b> ouvertes à tous </b> !</p>
 									<p id="countdown" style="font-size:20px"></p>
 									<!--<p>🔴En Live ! <a href="https://live.passageenseine.fr/">https://live.passageenseine.fr/</a><br />-->
@@ -196,8 +196,8 @@
 						<article id="Info">
 							<h2 class="major">Informations Pratiques</h2>
 							<h3>Lieu</h3>
-							<p>Le festival a lieu aux abords de la Médiathèque Aragon à Choisy-le-Roi, à 5 min à pied de la Gare de RER «&nbsp;Choisy-le-Roi&nbsp;» sur la ligne C.</p>
-							<p>La médiathèque Aragon (17 Rue Pierre Mendès France, 94&nbsp;600 Choisy-le-Roi) met à notre disposition la salle l'Escale pour les conférences, son espace convivial près de l'accueil pour certains ateliers et son rez-de-chaussée pour le village associatif.</p>
+							<p>La journée de conférences a lieu dans le bâtiment de la faculté de Droit, Sciences Économiques et de Gestion sur le campus universitaire de Tohannic à Vannes.<br />Le campus (arrêts Marcellin et Tohannic) est desservi par la ligne 6a depuis la gare SNCF et les lignes 2 et 6b depuis le P+R Ouest.</p>
+							<p>La faculté de Droit, Sciences Économiques et de Gestion (Rue André Lwoff, 56&nbsp;000 Vannes) met à notre disposition ses amphithéatres pour les conférences, ainsi que tout son hall pour les moments de convivialité.</p>
 							<p>Le lieu est accessible aux personnes moins valides.</p>
 							<div id="mapid" style="height: 180px;"></div>
 							<br>
@@ -534,7 +534,7 @@
 				L.control.scale().addTo(mymap);
 
 				// show a marker on the map
-				L.marker({lon: 47.64464, lat: -2.74720}).bindPopup('Bâtiment DSEG, lieu de Déroulement de la HitchHack 2020').addTo(mymap);
+				var marker = L.marker([47.64464,-2.74720]).bindPopup('Faculté DSEG<br />Rue André Lwoff<br />56000 Vannes').addTo(mymap);
 			</script>
 
 	</body>
